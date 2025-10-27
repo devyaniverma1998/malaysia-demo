@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Mani Traders Sdn Bhd's currency exchange and remittance services in Malaysia, offering competitive rates and secure transactions.">
+    <meta name="keywords" content="Mani Traders, services, currency exchange, remittance, Malaysia, MyMsbPro, Mandiri Remittance">
+    <meta name="author" content="Mani Traders Sdn Bhd">
+    <title>Our Services - Mani Traders Sdn Bhd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: url('/img/services-banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .ticker {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a class="flex items-center space-x-2" href="index.html">
+                <img src="img/logo.png" alt="Mani Traders Logo" class="h-12">
+                <span class="text-xl font-bold">Mani Traders</span>
+            </a>
+            <button class="lg:hidden focus:outline-none" id="navbarToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <div class="hidden lg:flex lg:items-center space-x-6" id="navbarMenu">
+                <a href="index.html" class="hover:text-[#e92126]  transition">Home</a>
+                <a href="services.html" class="text-[#e92126]  font-semibold">Services</a>
+                <a href="products.html" class="hover:text-[#e92126]  transition">Products</a>
+                <a href="about.html" class="hover:text-[#e92126]  transition">About Us</a>
+                <a href="testimonials.html" class="hover:text-[#e92126]  transition">Testimonials</a>
+                <a href="faq.html" class="hover:text-[#e92126]  transition">FAQ</a>
+                <a href="contact.html" class="hover:text-[#e92126]  transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-gray-800 text-white" id="mobileMenu">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-2">
+            <a href="index.html" class="hover:text-[#e92126]  transition">Home</a>
+            <a href="services.html" class="text-[#e92126]  font-semibold">Services</a>
+            <a href="products.html" class="hover:text-[#e92126]  transition">Products</a>
+            <a href="about.html" class="hover:text-[#e92126]  transition">About Us</a>
+            <a href="testimonials.html" class="hover:text-[#e92126]  transition">Testimonials</a>
+            <a href="faq.html" class="hover:text-[#e92126]  transition">FAQ</a>
+            <a href="contact.html" class="hover:text-[#e92126]  transition">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+            <p class="text-lg md:text-xl">Tailored financial solutions for seamless currency exchange and remittance</p>
+        </div>
+    </section>
+
+    <!-- Exchange Rate Ticker -->
+    <section class="bg-gray-200 py-2">
+        <div class="container mx-auto px-4">
+            <div class="ticker">
+                <div class="ticker-content text-sm md:text-base font-medium">
+                    USD/MYR: 4.30 | EUR/MYR: 4.68 | GBP/MYR: 5.62 | AUD/MYR: 2.88 | SGD/MYR: 3.28 | JPY/MYR: 0.029 | Last updated: Oct 16, 2025
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold">Financial Solutions You Can Trust</h2>
+            <p class="text-lg text-gray-600 mt-2">Discover our reliable and efficient services designed for your needs</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Currency Exchange -->
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <img src="img/services.jpeg" alt="Currency Exchange" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold mb-3">Currency Exchange</h3>
+                <p class="text-gray-600 mb-4">Exchange over 30 major currencies with competitive rates using our advanced MyMsbPro System. Enjoy secure, transparent, and fast transactions both online and at our branches.</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Real-time rates updated daily</li>
+                    <li>Support for USD, EUR, GBP, and more</li>
+                    <li>No hidden fees</li>
+                </ul>
+                <a href="contact.html" class="inline-block bg-[#e92126] text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Get Quote</a>
+            </div>
+            <!-- Remittance Service -->
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <img src="img/remittance.jpeg" alt="Remittance Service" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-2xl font-semibold mb-3">Remittance Service</h3>
+                <p class="text-gray-600 mb-4">Send money internationally with speed and security through our Mandiri International Remittance service. Perfect for personal and business transactions.</p>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                    <li>Transfers processed within 24 hours</li>
+                    <li>Global reach to multiple countries</li>
+                    <li>Secure and reliable platform</li>
+                </ul>
+                <a href="contact.html" class="inline-block bg-[#e92126] text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Send Money</a>
+            </div>
+        </div>
+        <!-- How It Works -->
+        <div class="mt-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">How Our Services Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-coins text-3xl text-[#e92126]  mb-4"></i>
+                    <h5 class="text-xl font-semibold">Choose Your Service</h5>
+                    <p class="text-gray-600">Select currency exchange or remittance via our online platform or in-branch.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-calculator text-3xl text-[#e92126]  mb-4"></i>
+                    <h5 class="text-xl font-semibold">Get a Quote</h5>
+                    <p class="text-gray-600">View real-time rates or transfer details and confirm your transaction.</p>
+                </div>
+                <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-check-circle text-3xl text-[#e92126]  mb-4"></i>
+                    <h5 class="text-xl font-semibold">Complete Transaction</h5>
+                    <p class="text-gray-600">Finalize securely online or with our expert staff at any branch.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <a href="contact.html" class="bg-[#e92126] text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-500 transition">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mani Traders Sdn Bhd</h3>
+                    <p class="text-gray-300">No. 1006, Selangor Mansion, Jalan Masjid India, 50100 Kuala Lumpur.</p>
+                    <p class="text-gray-300 mt-2">Licensed by Bank Negara Malaysia</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300  hover:underline">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300  hover:underline">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300  hover:underline">Contact</a></li>
+                        <li><a href="terms.html" class="text-gray-300  hover:underline">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-300  hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-300">XXXXXXXXXX</p>
+                    <p class="text-gray-300 mt-2">info@manitraders.com</p>
+                    <p class="text-gray-300 mt-2">Mon-Fri: 9:30 AM - 6:30 PM</p>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-sm text-gray-400">&copy; 2025 Mani Traders Sdn Bhd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        navbarToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mock exchange rate update (for demo)
+        const tickerContent = document.querySelector('.ticker-content');
+        setInterval(() => {
+            tickerContent.textContent = `USD/MYR: ${4.3 + Math.random() * 0.1} | EUR/MYR: ${4.68 + Math.random() * 0.1} | GBP/MYR: ${5.62 + Math.random() * 0.1} | AUD/MYR: ${2.88 + Math.random() * 0.1} | SGD/MYR: ${3.28 + Math.random() * 0.1} | JPY/MYR: ${0.029 + Math.random() * 0.001} | Last updated: ${new Date().toLocaleString()}`;
+        }, 30000);
+    </script>

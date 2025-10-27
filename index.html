@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mani Traders Sdn Bhd offers fast, reliable money exchange and remittance services with competitive rates and 30+ currencies in Malaysia.">
+    <meta name="keywords" content="money exchange, remittance, currency exchange, Malaysia, Mani Traders">
+    <meta name="author" content="Mani Traders Sdn Bhd">
+    <title>Mani Traders Sdn Bhd - Money Exchange & Remittance</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+        --primary: #0f172a; /* Midnight blue */
+        --accent: #e92126; /* Vibrant red */
+        --text: #1e293b; /* Slate text */
+        --bg: #e2e8f0; /* Soft gray background */
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(to right, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)),
+            url('/img/banner1.png') no-repeat center center;
+        background-size: cover;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        color: #fff;
+        max-width: 80%;
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Navbar */
+    .navbar {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+    }
+
+    .navbar a {
+        color: var(--text);
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: var(--accent);
+    }
+
+    /* Cards */
+    .card {
+        background: #fff;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Ticker */
+    .ticker {
+        background: var(--primary);
+        padding: 0.75rem 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ticker-content {
+        color: #fff;
+        font-weight: 500;
+        display: inline-block;
+        animation: ticker 28s linear infinite;
+    }
+
+    .ticker-content span {
+        color: var(--accent);
+        margin: 0 1rem;
+    }
+
+    @keyframes ticker {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* Fade Animation */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .fade-in-delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .fade-in-delay-2 {
+        animation-delay: 0.4s;
+    }
+
+    .fade-in-delay-3 {
+        animation-delay: 0.6s;
+    }
+
+    /* Branch Teaser */
+    .branch-teaser {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        border-radius: 0.75rem;
+        padding: 2rem;
+        color: #fff;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background: var(--accent);
+        color: #fff;
+        padding: 0.75rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-primary:hover {
+        background-color: #c81d21; /* slightly darker accent */
+        transform: translateY(-2px);
+    }
+
+    .btn-outline {
+        border: 2px solid var(--accent);
+        color: var(--accent);
+        padding: 0.75rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-outline:hover {
+        background: var(--accent);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    /* Floating CTA */
+    .floating-cta {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        z-index: 100;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero {
+            height: 80vh;
+        }
+
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+
+        .hero-content p {
+            font-size: 0.9rem;
+        }
+
+        .card {
+            padding: 1rem;
+        }
+
+        .branch-teaser {
+            padding: 1.5rem;
+        }
+
+        .floating-cta {
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .container {
+            max-width: 1280px;
+        }
+    }
+</style>
+
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a class="flex items-center space-x-2" href="index.html">
+                <img src="img/logo.png" alt="Mani Traders Logo" class="h-12">
+                <span class="text-xl font-bold">Mani Traders</span>
+            </a>
+            <button class="lg:hidden focus:outline-none" id="navbarToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <div class="hidden lg:flex lg:items-center space-x-6" id="navbarMenu">
+                <a href="index.html" class="text-[#e92126]  font-semibold">Home</a>
+                <a href="services.html" class="hover:text-[#e92126]  transition">Services</a>
+                <a href="products.html" class="hover:text-[#e92126]  transition">Products</a>
+                <a href="about.html" class="hover:text-[#e92126]  transition">About Us</a>
+                <a href="testimonials.html" class="hover:text-[#e92126]  transition">Testimonials</a>
+                <a href="faq.html" class="hover:text-[#e92126]  transition">FAQ</a>
+                <a href="contact.html" class="hover:text-[#e92126]  transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden bg-gray-800 text-white" id="mobileMenu">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-2">
+            <a href="index.html" class="text-[#e92126]  font-semibold">Home</a>
+            <a href="services.html" class="hover:text-[#e92126]  transition">Services</a>
+            <a href="products.html" class="hover:text-[#e92126]  transition">Products</a>
+            <a href="about.html" class="hover:text-[#e92126]  transition">About Us</a>
+            <a href="testimonials.html" class="hover:text-[#e92126]  transition">Testimonials</a>
+            <a href="faq.html" class="hover:text-[#e92126]  transition">FAQ</a>
+            <a href="contact.html" class="hover:text-[#e92126]  transition">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fast & Reliable Money Exchange</h1>
+            <p class="text-lg md:text-xl mb-6">30+ Currencies | Competitive Rates | Online & Branch Services</p>
+            <div class="space-x-4">
+                <a href="services.html" class="bg-[#e92126] text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">Explore Services</a>
+                <a href="contact.html" class="bg-transparent border-2 border-[#e92126]-400 text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#e92126] hover:text-gray-900 transition">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchange Rate Ticker -->
+    <section class="bg-black py-2">
+        <div class="container mx-auto px-4">
+            <div class="ticker">
+                <div class="ticker-content text-sm md:text-base font-medium">
+                    USD/MYR: 4.30 | EUR/MYR: 4.68 | GBP/MYR: 5.62 | AUD/MYR: 2.88 | SGD/MYR: 3.28 | JPY/MYR: 0.029 | Last updated: Oct 16, 2025
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- About Us -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">About Mani Traders</h2>
+            <p class="text-base md:text-lg max-w-2xl mx-auto">Since 2008, Mani Traders Sdn Bhd has been a Bank Negara Malaysia-licensed leader in currency exchange and remittance, offering secure and reliable services in Kuala Lumpur and Petaling Jaya.</p>
+        </div>
+        <div class="flex justify-center">
+            <a href="about.html" class="btn-primary">Our Story</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="container mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold">Why Choose Mani Traders</h2>
+            <p class="text-lg text-gray-600 mt-2">Your trusted partner for money services in Malaysia</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-money-bill-wave text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Best Rates</h5>
+                <p class="text-gray-600">We buy & sell at the most competitive rates.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-paper-plane text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Fast Transfers</h5>
+                <p class="text-gray-600">Quick and reliable money transfer services.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-globe text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">30+ Currencies</h5>
+                <p class="text-gray-600">Exchange a wide range of international currencies.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-laptop text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Online Transfer</h5>
+                <p class="text-gray-600">Convenient online money transfer services.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-truck text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Special Delivery</h5>
+                <p class="text-gray-600">Special delivery options for your convenience.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <i class="fa-solid fa-headset text-4xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Excellent Service</h5>
+                <p class="text-gray-600">Dedicated team providing exceptional customer service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto px-4 py-12 bg-gray-50">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold">Our Services</h2>
+            <p class="text-lg text-gray-600 mt-2">Tailored financial solutions for your needs</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="img/services.jpeg" alt="Currency Exchange" class="w-full h-48 object-cover rounded-lg mb-4">
+                <i class="fa-solid fa-coins text-3xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Currency Exchange</h5>
+                <p class="text-gray-600">Exchange 30+ currencies with our advanced MyMsbPro System at unbeatable rates.</p>
+                <a href="services.html" class="inline-block mt-4 bg-[#e92126] text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Learn More</a>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="img/remittance.jpeg" alt="Remittance Service" class="w-full h-48 object-cover rounded-lg mb-4">
+                <i class="fa-solid fa-hand-holding-dollar text-3xl text-[#e92126]  mb-4"></i>
+                <h5 class="text-xl font-semibold">Remittance Service</h5>
+                <p class="text-gray-600">Secure and swift international transfers via Mandiri International Remittance.</p>
+                <a href="services.html" class="inline-block mt-4 bg-[#e92126] text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Learn More</a>
+            </div>
+        </div>
+    </section>
+  <!-- Branch Teaser -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="branch-teaser text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Visit Our Branches</h2>
+            <p class="text-base mb-6">Masjid India: No. 1006, Selangor Mansion, 50100 Kuala Lumpur<br>Paradigm Mall: Lot GB-01A, Jalan SS 7/26A, 47301 Petaling Jaya</p>
+            <a href="contact.html" class="btn-primary">Find Us</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container mx-auto px-4 py-16 bg-[var(--bg)]">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+            <p class="text-base md:text-lg max-w-xl mx-auto">Trusted by thousands across Malaysia</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card p-6 fade-in fade-in-delay-1">
+                <p class="italic text-sm mb-4">"Best USD to MYR rates in Kuala Lumpur with top-notch service."</p>
+                <p class="font-semibold text-[var(--primary)]">Sarah L., Kuala Lumpur</p>
+                <p class="text-xs text-[var(--text)]/70">October 2025</p>
+            </div>
+            <div class="card p-6 fade-in fade-in-delay-2">
+                <p class="italic text-sm mb-4">"Transferred funds to Indonesia in hours. Highly reliable."</p>
+                <p class="font-semibold text-[var(--primary)]">Ahmad R., Penang</p>
+                <p class="text-xs text-[var(--text)]/70">September 2025</p>
+            </div>
+            <div class="card p-6 fade-in fade-in-delay-3">
+                <p class="italic text-sm mb-4">"The online platform is seamless for SGD to MYR transfers."</p>
+                <p class="font-semibold text-[var(--primary)]">David W., Sabah</p>
+                <p class="text-xs text-[var(--text)]/70">August 2025</p>
+            </div>
+        </div>
+        <div class="text-center mt-6">
+            <a href="testimonials.html" class="btn-primary">More Testimonials</a>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <a href="contact.html" class="floating-cta btn-primary text-sm"><i class="fas fa-phone mr-2"></i>Contact Now</a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mani Traders Sdn Bhd</h3>
+                    <p class="text-gray-300">No. 1006, Selangor Mansion, Jalan Masjid India, 50100 Kuala Lumpur.</p>
+                    <p class="text-gray-300 mt-2">Licensed by Bank Negara Malaysia</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-300  hover:underline">Services</a></li>
+                        <li><a href="about.html" class="text-gray-300  hover:underline">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300  hover:underline">Contact</a></li>
+                        <li><a href="terms.html" class="text-gray-300  hover:underline">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-300  hover:underline">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-300">XXXXXXXXXX</p>
+                    <p class="text-gray-300 mt-2">info@manitraders.com</p>
+                    <p class="text-gray-300 mt-2">Mon-Fri: 9:30 AM - 6:30 PM</p>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <p class="text-center text-sm text-gray-400">&copy; 2025 Mani Traders Sdn Bhd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        navbarToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mock exchange rate update (for demo)
+        const tickerContent = document.querySelector('.ticker-content');
+        setInterval(() => {
+            tickerContent.textContent = `USD/MYR: ${4.3 + Math.random() * 0.1} | EUR/MYR: ${4.68 + Math.random() * 0.1} | GBP/MYR: ${5.62 + Math.random() * 0.1} | AUD/MYR: ${2.88 + Math.random() * 0.1} | SGD/MYR: ${3.28 + Math.random() * 0.1} | JPY/MYR: ${0.029 + Math.random() * 0.001} | Last updated: ${new Date().toLocaleString()}`;
+        }, 30000);
+    </script>
